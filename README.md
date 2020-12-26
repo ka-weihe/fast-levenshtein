@@ -13,7 +13,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/ka-weihe/fast-levenshtein/"
+	"github.com/ka-weihe/fast-levenshtein"
 )
 
 func main() {
