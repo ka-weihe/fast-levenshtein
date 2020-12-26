@@ -1,4 +1,4 @@
-# fast-levenshtein :rocket
+# fast-levenshtein :rocket: 
 
 > Fastest levenshtein implementation in Go.
 > Measure the difference between two strings.
