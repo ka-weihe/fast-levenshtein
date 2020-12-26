@@ -1,7 +1,10 @@
 # fast-levenshtein :rocket: 
 
 > Fastest levenshtein implementation in Go.
+
 > Measure the difference between two strings.
+
+not production ready yet
 
 ```bash
 $ go get github.com/ka-weihe/fast-levenshtein
