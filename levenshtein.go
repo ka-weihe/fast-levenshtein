@@ -120,7 +120,7 @@ func myers_x(a, b string) int {
 	return int(sc)
 }
 
-func distance(a, b string) int {
+func Distance(a, b string) int {
 	if len(a) < len(b) {
 		a, b = b, a
 	}
