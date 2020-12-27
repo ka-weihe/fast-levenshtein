@@ -2,7 +2,7 @@ package levenshtein
 
 var peq [0x10000]uint64
 
-func myers_64(a string, b string) int {
+func m64(a string, b string) int {
 	pv := ^uint64(0)
 	mv := uint64(0)
 	sc := 0
@@ -40,7 +40,7 @@ func min(x, y int) int {
 	return y
 }
 
-func myers_x(a string, b string) int {
+func mx(a string, b string) int {
 	s1 := []rune(a)
 	s2 := []rune(b)
 	n := len(s1)
@@ -129,7 +129,7 @@ func Distance(a, b string) int {
 		return len(a)
 	}
 	if len(a) <= 64 {
-		return myers_64(a, b)
+		return m64(a, b)
 	}
-	return myers_x(a, b)
+	return mx(a, b)
 }
