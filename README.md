@@ -4,6 +4,9 @@
 
 > Measure the difference between two strings.
 
+note: this implementation is currently not threadsafe and it assumes that the runes only go up to 65536. This will be fixed soon.
+
+## Download
 ```bash
 $ go get github.com/ka-weihe/fast-levenshtein
 ```
