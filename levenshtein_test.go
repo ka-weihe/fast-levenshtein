@@ -40,7 +40,7 @@ func TestFuzz(t *testing.T) {
 	}
 }
 
-func BenchmarkAll(b *testing.B) {
+func Benchmark(b *testing.B) {
 	data := [...][]string{
 		rnd_string_arr(500, 4),
 		rnd_string_arr(500, 8),
