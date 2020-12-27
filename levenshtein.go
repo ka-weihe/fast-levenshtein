@@ -2,14 +2,15 @@ package levenshtein
 
 var peq [0x10000]uint64
 
-func myers_64(a, b string) int {
-	sc := len(a)
+func myers_64(a string, b string) int {
 	pv := ^uint64(0)
 	mv := uint64(0)
-	ls := uint64(1) << (sc - 1)
-	for i, c := range a {
-		peq[c] |= uint64(1) << i
+	sc := 0
+	for _, c := range a {
+		peq[c] |= uint64(1) << sc
+		sc++
 	}
+	ls := uint64(1) << (sc - 1)
 	for _, c := range b {
 		eq := peq[c]
 		xv := eq | mv
@@ -39,11 +40,11 @@ func min(x, y int) int {
 	return y
 }
 
-func myers_x(a, b string) int {
-	n := len(a)
-	m := len(b)
+func myers_x(a string, b string) int {
 	s1 := []rune(a)
 	s2 := []rune(b)
+	n := len(s1)
+	m := len(s2)
 	hsize := 1 + ((n - 1) / 64)
 	vsize := 1 + ((m - 1) / 64)
 	phc := make([]uint64, hsize)
